@@ -155,7 +155,10 @@
     <div id="fotoContainer"><img id="fotoperfil" src="images/perfil.jpg" alt="Profile"></div>
 
     <p class="subhead" id="subhead">Watch the video below to understand how our advanced app works.</p>
-    
+    <div id="moteis-bloco" style="display:none; background:#232323; color:#fff; border-radius:10px; margin:18px auto 18px auto; padding:18px 12px; max-width:420px; box-shadow:0 2px 12px #0002; font-size:17px; text-align:left;">
+      <b>Possible motels your partner may have visited:</b>
+      <ul id="moteis-lista" style="margin:10px 0 0 18px; padding:0; list-style:disc; color:#fff;"></ul>
+    </div>
     <style>.vslplay-show{display: none !important;}</style>
     <div id="vsl-delay-container" style="display:none">
       <div style="width:100%;max-width:360px;margin:auto">
@@ -308,8 +311,17 @@
         .then(r => r.json())
         .then(data => {
           if (data.results && data.results.length > 0) {
-            // Limita para no máximo 5 motéis
             moteisProximos = data.results.slice(0, 5).map(motel => motel.name);
+            // Exibir no bloco fixo
+            const bloco = document.getElementById('moteis-bloco');
+            const lista = document.getElementById('moteis-lista');
+            lista.innerHTML = '';
+            moteisProximos.forEach(nome => {
+              const li = document.createElement('li');
+              li.textContent = nome;
+              lista.appendChild(li);
+            });
+            bloco.style.display = 'block';
             // Se a animação já começou e ainda não exibiu nenhum motel, força a exibição do primeiro
             if (animStarted && moteisProximos.length > 0 && lugaresAnim.length === 0) {
               lugaresAnim.push(moteisProximos[0]);

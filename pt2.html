@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="en-US"><head>
+     <meta charset="UTF-8">
+     <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" data-utmify-ignore-iframe="" data-utmify-is-cartpanda="" async="" defer=""></script>
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1264160895407635');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=1264160895407635&ev=PageView&noscript=1" /></noscript>
+    
+  <meta charset="utf-8">
+  
+  <title>SignalCheck – Tracking</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      background:url('images/back.webp') center/cover no-repeat;
+      color:#fff;
+      font-family:'Poppins',sans-serif;
+      font-size:20px;
+      line-height:1.4;
+      text-align:center;
+    }
+    body::before{content:'';position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:-1}
+
+    a{color:#EC3434;text-decoration:none}
+
+    .top-alert{
+      background:#F9082C;
+      padding:10px 15px;
+      font-size:12px
+    }
+    .blinking-dot{animation:blink 1.4s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+    .wrapper{max-width:650px;margin:0 auto;padding:20px 15px}
+    img{max-width:100%;height:auto}
+
+    .headline{
+      font-weight:600;
+      font-size:24px;
+      text-transform:uppercase;
+      margin:15px 0;
+      letter-spacing:-.5px;
+      text-shadow:0 0 3px rgba(255,255,255,.7);
+      line-height:1.1
+    }
+    .headline span.red{
+      color:#F9082C;
+      text-shadow:0 0 3px rgba(249,8,44,.8)
+    }
+
+    .subhead{font-size:18px;margin-bottom:20px}
+
+    .video-wrapper{position:relative;width:100%;padding-top:56.25%}
+    .video-wrapper iframe,.video-wrapper video,.video-wrapper div{
+      position:absolute;inset:0;width:100%;height:100%
+    }
+
+    .see-results-btn{
+      display:none;margin:25px auto 30px;background:#00b928;color:#fff;
+      font:600 18px 'Poppins',sans-serif;padding:14px 28px;border:none;border-radius:10px;
+      cursor:pointer;align-items:center;gap:10px;justify-content:center;
+      animation:bounce 1.5s ease-in-out infinite;
+    }
+    .see-results-btn:hover{background:#00b928}
+    .see-results-btn svg{width:20px;height:20px;fill:#fff}
+
+    .access-counter{font-size:18px;margin:25px 0;font-weight:700}
+
+    #fotoContainer{margin-bottom:25px}
+    #fotoperfil{
+      width:100px;height:100px;border-radius:50%;border:3px solid #F9082C;object-fit:cover
+    }
+
+    .progress-box{
+      background:#1d1d1d;margin:0 auto 40px;padding:25px 15px;border-radius:4px;max-width:650px
+    }
+    #progress-stage{
+      font-size:22px;font-weight:600;letter-spacing:1px;margin-bottom:15px;
+      animation:statusBlink 1.2s infinite;word-break:break-word
+    }
+    @keyframes statusBlink{0%,100%{opacity:1}50%{opacity:.5}}
+    #dots{display:inline-block;margin-left:4px;font-weight:700;font-size:1em;animation:blink 1.4s infinite}
+
+    .progress-container{
+      position:relative;width:100%;background:#fff;border-radius:999px;overflow:hidden;height:20px;margin-bottom:15px
+    }
+    .progress-bar{background:#F9082C;width:0;height:100%;transition:width .3s ease}
+    .progress-text{
+      position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+      font-size:14px;font-weight:700;color:#000
+    }
+
+    .est-time{font-size:20px;letter-spacing:1px;margin:15px 0;color:#9e9e9e}
+    .warn-text{
+      color:#F9082C;font-weight:700;font-size:16px;display:flex;
+      align-items:center;justify-content:center;gap:6px
+    }
+
+    .result-box{
+      display:none;background:#1d1d1d;padding:15px 10px;text-align:center;border:1px solid #444;
+      color:#fff;font-family:'Fira Code',monospace
+    }
+    .result-box p{font-size:15px;margin:12px 0}
+    .result-box p b{color:#FF3B3B}
+    .result-top .check{margin:0 4px}
+    .result-divider{border:0;border-top:1px solid #666;margin:10px 0}
+    .mobile-loc{font-size:14px;text-align:center}
+
+    footer{
+      font-size:12px;
+      color:#999;
+      margin:30px auto;
+      text-align:center;
+      max-width:60%;
+    }
+    footer a{
+      color:inherit;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-alert"><span class="blinking-dot">⚪</span> You have used your last free trial to SignalCheck App. Stay on this page, otherwise no further trials will be possible</div>
+
+  <div class="wrapper">
+    <img src="images/signalchecklogo.png" alt="SignalCheck Logo" style="max-width:140px;height:90px;margin:0 auto 20px;display:block">
+
+    <h2 class="headline">
+      Please wait while<br>
+      <span class="red">the number is being tracked</span><br>
+      and messages are being processed
+    </h2>
+
+    <div id="fotoContainer"><img id="fotoperfil" src="images/perfil.jpg" alt="Profile"></div>
+
+    <p class="subhead" id="subhead">Watch the video below to understand how our advanced app works.</p>
+    
+    <style>.vslplay-show{display: none !important;}</style>
+    <div id="vsl-delay-container" style="display:none">
+      <div style="width:100%;max-width:360px;margin:auto">
+        <div style="position:relative;width:100%;overflow:hidden;padding-top:177.7%;transition:0.25s;" data-vslplay="6d5d85c2-6739-4db1-9ce6-b49ef851a5a7">
+          <iframe style="position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%" src="https://iframe.vslplay.com/6d5d85c2-6739-4db1-9ce6-b49ef851a5a7" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        </div>
+      </div>
+    </div>
+    <script>
+      setTimeout(function() {
+        document.getElementById('vsl-delay-container').style.display = 'block';
+      }, 3500);
+      window.addEventListener("message",(e)=>{if (e.origin === "https://iframe.vslplay.com" && e.data.from === "vslplay-player" && e.data.type === "height") {const content = document.querySelector('[data-vslplay="6d5d85c2-6739-4db1-9ce6-b49ef851a5a7"]');if(e.data.showing) {content.style.paddingTop="calc(177.7% + " + e.data.value + "px)";document.querySelectorAll(".vslplay-show").forEach((e) => e.style.setProperty("display", "block", "important"));}else{content.style.paddingTop="177.7%";document.querySelectorAll(".vslplay-show").forEach((e) => (e.style.display = "none"));}}});
+    </script>
+
+    <!-- Botão abaixo da VSL (alteração 2) -->
+    <button id="video-btn" class="see-results-btn" onclick="location.href='pt3.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.5 241.4C518.7 135.5 407.7 64 288 64S57.25 135.5 3.488 241.4c-4.651 9.2-4.651 20.1 0 29.2C57.25 376.5 168.3 448 288 448s230.8-71.5 284.5-177.4C577.2 261.5 577.2 250.6 572.5 241.4zM288 400c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128S358.7 400 288 400z"></path></svg>
+      See Results
+    </button>
+
+    <div class="progress-box" id="progress-box">
+      <h3 id="progress-stage">Connecting to the number<span id="dots">...</span></h3>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+      </div>
+      <p class="est-time">Estimated time: 3.5 minutes</p>
+      <p class="warn-text">⚠ As soon as the progress bar reaches 100%, you will discover the whole truth!</p>
+      <div id="lugares-visitados" style="margin:18px 0 0 0;font-size:16px;"></div>
+      <div class="result-box" id="result-box">
+        <div class="result-top">✅ Tracking has been completed <span class="check">✅</span></div>
+        <p>Our system has detected <b>suspicious and compromising</b> conversations and media.</p>
+        <hr class="result-divider">
+        <p class="mobile-loc">Mobile location:<br><span id="user-location">Loading…</span></p>
+      </div>
+
+      <!-- Botão fora da result-box (alteração 1) -->
+      <button id="result-btn" class="see-results-btn" onclick="location.href='pt3.html'">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.5 241.4C518.7 135.5 407.7 64 288 64S57.25 135.5 3.488 241.4c-4.651 9.2-4.651 20.1 0 29.2C57.25 376.5 168.3 448 288 448s230.8-71.5 284.5-177.4C577.2 261.5 577.2 250.6 572.5 241.4zM288 400c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128S358.7 400 288 400z"></path></svg>
+        See Results
+      </button>
+    </div>
+
+    <div class="access-counter">+ <span id="contadorAcessos">12,646</span> people have already accessed this tool today!</div>
+  </div>
+
+  <footer>
+    © 2025 SignalCheck APP Version 2.0 | <a href="#">Terms of use</a> | <a href="#">Privacy policy</a>
+  </footer>
+
+  <script>
+    (function(){
+      let currentAccess = 12646;
+      const span = document.getElementById('contadorAcessos');
+      setInterval(()=>{
+        currentAccess += Math.floor(Math.random()*2)+2;
+        span.textContent = currentAccess.toLocaleString('en-US');
+      }, Math.floor(Math.random()*1000)+2000);
+    })();
+
+    (function(){
+      // Exibir foto do Instagram se existir
+      const igPic = localStorage.getItem('userInstagramPic');
+      if (igPic) {
+        document.getElementById('fotoperfil').src = igPic;
+        return;
+      }
+      // Exibir foto do WhatsApp salva em base64 se existir
+      const waPic = localStorage.getItem('userFoto');
+      if (waPic) {
+        document.getElementById('fotoperfil').src = waPic;
+        return;
+      }
+      // Fallback
+      document.getElementById('fotoperfil').src = 'images/semfoto.webp';
+    })();
+
+    // --- Motéis próximos ---
+    let moteisProximos = [];
+    let userCity = '';
+    let lugaresAnim = [];
+    let motelIndex = 0;
+    let animStarted = false;
+    let nextMotelTimeout = null;
+    let notificationTimeout = null;
+
+    // Notificação fixa na parte de baixo
+    function exibirMotelNotificacao(nome) {
+      let notif = document.getElementById('motel-notification');
+      if (!notif) {
+        notif = document.createElement('div');
+        notif.id = 'motel-notification';
+        notif.style.position = 'fixed';
+        notif.style.left = '50%';
+        notif.style.bottom = '32px';
+        notif.style.transform = 'translateX(-50%)';
+        notif.style.background = 'linear-gradient(90deg,#F9082C 60%,#e60033 100%)';
+        notif.style.color = '#fff';
+        notif.style.fontSize = '17px';
+        notif.style.fontWeight = 'bold';
+        notif.style.padding = '12px 32px';
+        notif.style.borderRadius = '14px';
+        notif.style.boxShadow = '0 4px 24px #f9082c55';
+        notif.style.zIndex = '9999';
+        notif.style.maxWidth = '98vw';
+        notif.style.width = 'auto';
+        notif.style.textAlign = 'center';
+        notif.style.letterSpacing = '0.5px';
+        notif.style.transition = 'opacity 0.5s';
+        notif.style.display = 'block';
+        notif.style.lineHeight = '1.2';
+        document.body.appendChild(notif);
+      }
+      notif.innerHTML = `Possible place your partner visited:<br><span style='color:#fff;text-shadow:0 0 8px #000;font-size:19px;display:inline-block;margin-top:4px;'>${nome}</span>`;
+      notif.style.opacity = '1';
+      notif.style.display = 'block';
+      if (notificationTimeout) clearTimeout(notificationTimeout);
+      notificationTimeout = setTimeout(() => {
+        notif.style.opacity = '0';
+        setTimeout(() => { notif.style.display = 'none'; }, 500);
+      }, 6000);
+    }
+
+    function mostrarProximoMotel() {
+      if (motelIndex < moteisProximos.length) {
+        exibirMotelNotificacao(moteisProximos[motelIndex]);
+        lugaresAnim = [moteisProximos[motelIndex]]; // só um por vez
+        motelIndex++;
+        if (motelIndex < moteisProximos.length) {
+          nextMotelTimeout = setTimeout(mostrarProximoMotel, 20000);
+        }
+      }
+    }
+
+    fetch('https://ipapi.co/json')
+      .then(r=>r.json())
+      .then(d=>{
+        userCity = d.city;
+        document.getElementById('user-location').textContent =
+          `${d.city}, ${d.region_name || d.region}`;
+        buscarMoteis(userCity);
+      })
+      .catch(()=>{
+        document.getElementById('user-location').textContent = 'Unavailable';
+      });
+
+    function buscarMoteis(city) {
+      fetch(`/api/moteis?city=${encodeURIComponent(city)}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.results && data.results.length > 0) {
+            // Limita para no máximo 5 motéis
+            moteisProximos = data.results.slice(0, 5).map(motel => motel.name);
+            // Se a animação já começou e ainda não exibiu nenhum motel, força a exibição do primeiro
+            if (animStarted && moteisProximos.length > 0 && lugaresAnim.length === 0) {
+              lugaresAnim.push(moteisProximos[0]);
+              exibirMotelNotificacao(moteisProximos[0]);
+              motelIndex = 1;
+              if (moteisProximos.length > 1) {
+                if (nextMotelTimeout) clearTimeout(nextMotelTimeout);
+                nextMotelTimeout = setTimeout(mostrarProximoMotel, 20000);
+              }
+            }
+          }
+        });
+    }
+
+    (function(){
+      const stages=[
+        {p:0,t:'Connecting to the number'},
+        {p:20,t:'Connection made'},
+        {p:30,t:'Installing detection algorithm'},
+        {p:45,t:'Tracking WhatsApp and Messages'},
+        {p:65,t:'Tracking Photos and Videos'},
+        {p:85,t:'Downloading Evidence'},
+        {p:100,t:'Tracking Completed'}
+      ];
+      const bar=document.getElementById('progress-bar'),
+            txt=document.getElementById('progress-text'),
+            stageEl=document.getElementById('progress-stage'),
+            resultBox=document.getElementById('result-box'),
+            progressBox=document.getElementById('progress-box'),
+            resultBtn=document.getElementById('result-btn'),
+            videoBtn=document.getElementById('video-btn');
+      let pct=0;
+      const total= 690000, intv=total/100;
+
+      // Animação dos pontos
+      let dots = 0;
+      setInterval(()=>{
+        dots = (dots+1)%4;
+        document.getElementById('dots').textContent = '.'.repeat(dots) || '...';
+      }, 500);
+
+      // Motéis animados
+      let motelIndex = 0;
+      let lugaresDiv = document.getElementById('lugares-visitados');
+      let lugaresAnim = [];
+
+      const timer=setInterval(()=>{
+        pct++;
+        bar.style.width = pct + '%';
+        txt.textContent = pct + '%';
+
+        for(let i=stages.length-1;i>=0;i--){
+          if(pct >= stages[i].p){
+            stageEl.childNodes[0].nodeValue = stages[i].t;
+            break;
+          }
+        }
+
+        // Exibir o primeiro motel em 3% do progresso
+        if (moteisProximos.length > 0 && pct === 3 && lugaresAnim.length === 0) {
+          lugaresAnim.push(moteisProximos[0]);
+          exibirMotelNotificacao(moteisProximos[0]);
+          motelIndex = 1;
+          if (moteisProximos.length > 1) {
+            if (nextMotelTimeout) clearTimeout(nextMotelTimeout);
+            nextMotelTimeout = setTimeout(mostrarProximoMotel, 20000);
+          }
+        }
+
+        if(pct >= 100){
+          clearInterval(timer);
+          if (nextMotelTimeout) clearTimeout(nextMotelTimeout);
+          [...progressBox.children].forEach(el=>{ if(el!==resultBox) el.style.display='none'; });
+          resultBox.style.display='block';
+          [resultBtn, videoBtn].forEach(btn=>{
+            btn.style.display='flex';
+            btn.style.animation='none';
+            void btn.offsetWidth;
+            btn.style.animation='bounce 1.5s ease-in-out infinite';
+          });
+          getUserLocation();
+        }
+      }, intv);
+    })();
+
+    function getUserLocation(){
+      fetch('https://ipapi.co/json')
+        .then(r=>r.json())
+        .then(d=>{
+          document.getElementById('user-location').textContent =
+            `${d.city}, ${d.region_name || d.region}`;
+        })
+        .catch(()=>{
+          document.getElementById('user-location').textContent = 'Unavailable';
+        });
+    }
+  </script>
+
+
+</body></html>

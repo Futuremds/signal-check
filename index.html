@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+    
+     <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" data-utmify-ignore-iframe="" data-utmify-is-cartpanda="" async="" defer=""></script>
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1264160895407635');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=1264160895407635&ev=PageView&noscript=1" /></noscript>
+			
+			<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '607492395743163');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=607492395743163&ev=PageView&noscript=1" /></noscript>
+			
+			<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1362952864777203');
+		fbq('track', 'PageView');
+	</script>
+	
+		<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1243363827471480');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=1243363827471480&ev=PageView&noscript=1" /></noscript>
+    
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignalCheck</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========== GLOBAIS ========== */
+
+    footer {
+    font-size: 12px;
+    color: #999;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 60%;
+    }
+    footer a {
+    color: inherit;
+    text-decoration: underline;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      background:url('images/back.webp') center/cover no-repeat fixed;
+      color:#fff;font-family:'Poppins',sans-serif;text-align:center;
+      padding:20px 0;margin:0;
+    }
+    .wrapper{width:360px;margin:0 auto;padding:0 10px;}
+    @media(max-width:768px){.wrapper{width:90%;padding:0;}}
+    .logo img{width:120px;}
+    h2,.bold-line{font-size:20px;}h2{margin:20px 0 5px;font-weight:normal;}
+    .bold-line{font-weight:bold;display:block;}
+    .step{
+      background:#e60033;padding:10px;margin-top:20px;border-radius:5px;
+      font-weight:bold;box-shadow:0 0 6px rgba(230,0,51,.4);
+    }
+    .description{margin:10px 0 20px;}
+    .note{background:#333;padding:15px;margin-top:30px;font-size:12px;}
+    .final-text{margin-top:20px;font-weight:bold;font-size:16px;}
+
+    /* ========== SPY DIALER ========== */
+    .spy-dialer *,.spy-dialer *::before,.spy-dialer *::after{box-sizing:border-box;margin:0;padding:0;}
+    .spy-dialer{display:flex;justify-content:center;color:#fff;padding:20px;
+      font-family:"SF Pro Display",Arial,Helvetica,sans-serif;}
+    .spy-dialer .phone-wrapper{width:100%;max-width:430px;display:flex;flex-direction:column;
+      align-items:center;position:relative;}
+
+    #toggle-flags{
+      background:transparent;border:1px solid #444;border-radius:6px;color:#fff;
+      font-size:clamp(14px,3vw,16px);padding:8px 16px;margin-bottom:20px;cursor:pointer;
+    }
+
+    #flag-selector,#more-flags{display:grid;gap:12px 16px;justify-content:center;}
+    #flag-selector{grid-template-columns:repeat(4,40px);margin-bottom:18px;}
+    #more-flags{grid-template-columns:repeat(auto-fill,minmax(40px,1fr));
+                max-width:320px;margin:12px 0 18px;}
+    .flag{width:40px;height:28px;object-fit:cover;border-radius:4px;cursor:pointer;
+      transition:transform .2s;}
+    .flag:hover{transform:scale(1.15);}
+
+    #display-wrapper{margin:20px 0 15px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+      font-size:clamp(24px,7vw,32px);}
+    #country-flag-img{width:28px;height:20px;border-radius:3px;object-fit:cover;}
+    #display-code{letter-spacing:1px;}#display-number{letter-spacing:2px;word-break:break-all;max-width:80vw;}
+
+    .dialer{display:grid;gap:clamp(12px,4vw,18px);justify-content:center;
+      grid-template-columns:repeat(3,minmax(70px,24vw));transition:opacity .3s;}
+    .dialer.dialer--loading{opacity:.3;pointer-events:none;}
+    .key{width:100%;aspect-ratio:1/1;border-radius:50%;background:#1e1e1e;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+      cursor:pointer;user-select:none;transition:background .15s;}
+    .key:active{background:#3a3a3a;}
+    .digit{font-size:clamp(24px,6vw,32px);font-weight:600;line-height:1;}
+    .letters{font-size:11px;margin-top:3px;letter-spacing:1px;opacity:.7;line-height:1;}
+
+    #spy-btn{grid-column:1/4;width:100%;height:60px;margin-top:32px;background:#00b928;
+      color:#fff;font:600 20px/1 'Poppins',sans-serif;border:none;border-radius:10px;cursor:pointer;
+      transition:background .3s;animation:bounce 1.5s ease-in-out infinite;}
+    #spy-btn:hover{background:#00b928;}
+    @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+    #progress-wrapper{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+      width:80%;height:14px;background:#000;border-radius:10px;overflow:hidden;
+      display:none;z-index:10;}
+    #progress-bar{width:0;height:100%;background:#f9082c;animation:none;}
+    @keyframes loading{from{width:0}to{width:100%}}
+
+    #fotoContainer{display:none;}
+
+    @media(max-width:380px){
+      #flag-selector{grid-template-columns:repeat(4,1fr);}
+      .dialer{gap:4vw;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <div class="wrapper">
+    <div class="logo"><img src="images/signalchecklogo.png" alt="SignalCheck Logo"></div>
+    <h2>Worried about hidden secrets?</h2>
+    <div class="bold-line">Get the clarity you deserve now.</div>
+
+    <!-- NOVO FLUXO DE PASSOS -->
+    <div class="step">STEP ONE</div>
+    <div class="description">Choose if you want to track by Instagram account or by phone number:</div>
+    <div style="display:flex;justify-content:center;gap:18px;margin:18px 0 28px 0;">
+      <button id="choose-instagram" class="btn-choose" type="button">Instagram</button>
+      <button id="choose-phone" class="btn-choose" type="button">Phone</button>
+    </div>
+    <div class="step">STEP TWO</div>
+    <div class="description" id="desc-instagram">Insert your partner's Instagram @ below.<br>(The system needs the Instagram @ as well).</div>
+    <div class="description" id="desc-phone" style="display:none;">Insert your partner's phone number using the keypad below.</div>
+    <div class="step">STEP THREE</div>
+    <div class="description">Let our advanced AI system discreetly analyze all their apps, chats, messages, and media files.</div>
+    <div class="step">STEP FOUR</div>
+    <div class="description">Access all tracked messages and uncover any suspicious content detected by our spy tool.</div>
+    <div class="note"><strong>PLEASE NOTE:</strong><br>"WE PROTECT YOUR PRIVACY. EVERYTHING STAYS ANONYMOUS"</div>
+
+    <!-- Blocos finais, apenas UM de cada, após o bloco PLEASE NOTE -->
+    <!-- Bloco Instagram -->
+    <div id="final-instagram" style="display:none;margin:32px auto 0 auto;max-width:420px;">
+      <div class="final-text" id="final-text-instagram" style="display:block;margin-bottom:10px;">ENTER YOUR PARTNER'S INSTAGRAM @ BELOW 👇</div>
+      <div style="display:flex;justify-content:center;align-items:center;margin:24px 0 0 0;position:relative;">
+        <span style="border-radius:50%;padding:8px;display:flex;align-items:center;justify-content:center;margin-right:10px;box-shadow:0 2px 8px rgba(238,42,123,0.18);background: none;">
+          <svg width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="ig-gradient" cx="50%" cy="50%" r="80%">
+                <stop offset="0%" stop-color="#f9ce34"/>
+                <stop offset="60%" stop-color="#ee2a7b"/>
+                <stop offset="100%" stop-color="#6228d7"/>
+              </radialGradient>
+            </defs>
+            <circle cx="16" cy="16" r="16" fill="url(#ig-gradient)"/>
+            <g>
+              <rect x="7" y="7" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/>
+              <circle cx="16" cy="16" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+              <circle cx="22.2" cy="9.8" r="1.3" fill="#fff"/>
+            </g>
+          </svg>
+        </span>
+        <input type="text" id="instagram-input" name="instagram" autocomplete="off" placeholder="Enter your partner's Instagram @" style="width:85%;max-width:400px;padding:14px 16px;font-size:17px;border-radius:10px;border:1.5px solid #ee2a7b;box-sizing:border-box;text-align:left;outline:none;transition:border 0.2s;box-shadow:0 2px 8px rgba(238,42,123,0.08);background:#181818;color:#fff;font-family:'Poppins',sans-serif;">
+        <div id="instagram-suggestions" style="position:absolute;top:100%;left:48px;right:0;z-index:10;background:#222;border-radius:0 0 10px 10px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></div>
+      </div>
+      <button id="spy-btn-instagram" style="margin:32px auto 0 auto;display:block;width:100%;height:60px;background:#00b928;color:#fff;font:600 20px/1 'Poppins',sans-serif;border:none;border-radius:10px;cursor:pointer;transition:background .3s;animation:bounce 1.5s ease-in-out infinite;">CLICK HERE TO SPY NOW 🕵️‍♂️</button>
+    </div>
+    <!-- Bloco Phone -->
+    <div id="final-phone" style="display:none;margin:32px auto 0 auto;max-width:420px;">
+      <div class="final-text" id="final-text-phone" style="display:block;margin-bottom:10px;">CHOOSE THE COUNTRY AND ENTER YOUR PARTNER'S NUMBER 👇</div>
+      <div id="phone-keypad-placeholder"></div>
+    </div>
+
+  
+   
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Instagram autocomplete
+  const instagramInput = document.getElementById('instagram-input');
+  const suggestionsBox = document.getElementById('instagram-suggestions');
+  let debounceTimeout = null;
+
+  instagramInput.addEventListener('input', function() {
+    const query = instagramInput.value.trim().replace('@', '');
+    suggestionsBox.innerHTML = '';
+    if (query.length < 3) return;
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+      fetch(`https://instagram-best-experience.p.rapidapi.com/users_search?query=${encodeURIComponent(query)}`, {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': 'e94aabc4f2msheb3378e1bc6f3d6p1c7d9cjsn1bba7819fef7',
+          'x-rapidapi-host': 'instagram-best-experience.p.rapidapi.com'
+        }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (!Array.isArray(data)) return;
+        suggestionsBox.innerHTML = '';
+        data.slice(0, 5).forEach(user => {
+          const div = document.createElement('div');
+          div.style = 'display:flex;align-items:center;padding:8px;cursor:pointer;background:#222;border-bottom:1px solid #444;';
+          div.innerHTML = `
+            <img src="https://igpic-backend.vercel.app/api/igimg?url=${encodeURIComponent(user.profile_pic_url)}" alt="" style="width:32px;height:32px;border-radius:50%;margin-right:10px;">
+            <span style="font-weight:bold;">@${user.username}</span>
+            <span style="margin-left:8px;color:#aaa;">${user.full_name || ''}</span>
+          `;
+          div.onclick = () => {
+            instagramInput.value = '@' + user.username;
+            suggestionsBox.innerHTML = '';
+            localStorage.setItem('userInstagramPic', 'https://igpic-backend.vercel.app/api/igimg?url=' + encodeURIComponent(user.profile_pic_url));
+          };
+          suggestionsBox.appendChild(div);
+        });
+      });
+    }, 400);
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!instagramInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+      suggestionsBox.innerHTML = '';
+    }
+  });
+
+  // Botões e exibição dos blocos
+  const finalPhone = document.getElementById('final-phone');
+  const finalInstagram = document.getElementById('final-instagram');
+  const choosePhoneBtn = document.getElementById('choose-phone');
+  const chooseInstagramBtn = document.getElementById('choose-instagram');
+  let dialerCreated = false;
+
+  choosePhoneBtn.onclick = function() {
+    finalPhone.style.display = 'block';
+    finalInstagram.style.display = 'none';
+    choosePhoneBtn.classList.add('selected-btn');
+    chooseInstagramBtn.classList.remove('selected-btn');
+    if (!dialerCreated) {
+      criarDialer();
+      dialerCreated = true;
+    }
+  };
+
+  chooseInstagramBtn.onclick = function() {
+    finalPhone.style.display = 'none';
+    finalInstagram.style.display = 'block';
+    chooseInstagramBtn.classList.add('selected-btn');
+    choosePhoneBtn.classList.remove('selected-btn');
+  };
+
+  function criarDialer() {
+    var spyDialer = document.createElement('div');
+    spyDialer.className = 'spy-dialer';
+    spyDialer.innerHTML = `
+    <div class="phone-wrapper">
+      <div id="progress-wrapper"><div id="progress-bar"></div></div>
+        <div id="flag-selector" style="margin-bottom:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:12px 16px;max-width:320px;justify-content:center;">
+        <img class="flag" src="images/us.svg" data-code="+1" alt="🇺🇸">
+        <img class="flag" src="images/ca.svg" data-code="+1" alt="🇨🇦">
+        <img class="flag" src="images/gb.svg" data-code="+44" alt="🇬🇧">
+        <img class="flag" src="images/au.svg" data-code="+61" alt="🇦🇺">
+        <img class="flag" src="images/nz.svg" data-code="+64" alt="🇳🇿">
+        <img class="flag" src="images/ph.svg" data-code="+63" alt="🇵🇭">
+        <img class="flag" src="images/za.svg" data-code="+27" alt="🇿🇦">
+        <img class="flag" src="images/br.svg" data-code="+55" alt="🇧🇷">
+        <img class="flag" src="images/fr.svg" data-code="+33" alt="🇫🇷">
+        <img class="flag" src="images/de.svg" data-code="+49" alt="🇩🇪">
+        <img class="flag" src="images/es.svg" data-code="+34" alt="🇪🇸">
+        <img class="flag" src="images/it.svg" data-code="+39" alt="🇮🇹">
+        <img class="flag" src="images/no.svg" data-code="+47" alt="🇳🇴">
+        <img class="flag" src="images/fi.svg" data-code="+358" alt="🇫🇮">
+        <img class="flag" src="images/ch.svg" data-code="+41" alt="🇨🇭">
+        <img class="flag" src="images/se.svg" data-code="+46" alt="🇸🇪">
+        <img class="flag" src="images/pl.svg" data-code="+48" alt="🇵🇱">
+        <img class="flag" src="images/nl.svg" data-code="+31" alt="🇳🇱">
+        <img class="flag" src="images/pt.svg" data-code="+351" alt="🇵🇹">
+        <img class="flag" src="images/tr.svg" data-code="+90" alt="🇹🇷">
+        <img class="flag" src="images/mx.svg" data-code="+52" alt="🇲🇽">
+        <img class="flag" src="images/cl.svg" data-code="+56" alt="🇨🇱">
+        <img class="flag" src="images/ar.svg" data-code="+54" alt="🇦🇷">
+        <img class="flag" src="images/kr.svg" data-code="+82" alt="🇰🇷">
+        <img class="flag" src="images/ae.svg" data-code="+971" alt="🇦🇪">
+        <img class="flag" src="images/sa.svg" data-code="+966" alt="🇸🇦">
+        <img class="flag" src="images/ie.svg" data-code="+353" alt="🇮🇪">
+        <img class="flag" src="images/in.svg" data-code="+91" alt="🇮🇳">
+      </div>
+      <div id="display-wrapper">
+        <img id="country-flag-img" src="images/us.svg" alt="">
+        <span id="display-code">+1</span><span id="display-number"></span>
+      </div>
+      <div class="dialer">
+        <div class="key" data-val="1"><span class="digit">1</span><span class="letters"> </span></div>
+        <div class="key" data-val="2"><span class="digit">2</span><span class="letters">ABC</span></div>
+        <div class="key" data-val="3"><span class="digit">3</span><span class="letters">DEF</span></div>
+        <div class="key" data-val="4"><span class="digit">4</span><span class="letters">GHI</span></div>
+        <div class="key" data-val="5"><span class="digit">5</span><span class="letters">JKL</span></div>
+        <div class="key" data-val="6"><span class="digit">6</span><span class="letters">MNO</span></div>
+        <div class="key" data-val="7"><span class="digit">7</span><span class="letters">PQRS</span></div>
+        <div class="key" data-val="8"><span class="digit">8</span><span class="letters">TUV</span></div>
+        <div class="key" data-val="9"><span class="digit">9</span><span class="letters">WXYZ</span></div>
+        <div class="key" id="backspace"><span class="digit">←</span><span class="letters">DEL</span></div>
+        <div class="key" data-val="0"><span class="digit">0</span><span class="letters">+</span></div>
+        <div class="key" id="clear"><span class="digit">C</span><span class="letters">CLEAR</span></div>
+      </div>
+      <button id="spy-btn">CLICK HERE TO SPY NOW 🕵️‍♂️</button>
+      <div id="loader" style="display:none">🔍 Analyzing…</div>
+      <div id="fotoContainer" style="display:none">
+        <p>Profile picture found:</p><img id="fotoperfil" src="" alt="Profile">
+      </div>
+    </div>
+    `;
+    document.getElementById('phone-keypad-placeholder').appendChild(spyDialer);
+
+    // Evento para trocar o DDD e a bandeira ao clicar em qualquer país
+    var countryCode = '+1';
+    var flagSrc = 'images/us.svg';
+    var phoneNumber = '';
+    var displayNum = spyDialer.querySelector('#display-number');
+
+    function refresh() {
+      spyDialer.querySelector('#country-flag-img').src = flagSrc;
+      spyDialer.querySelector('#display-code').textContent = countryCode;
+      displayNum.textContent = phoneNumber;
+    }
+
+    spyDialer.querySelectorAll('.flag').forEach(f => f.onclick = function() {
+      countryCode = f.dataset.code;
+      flagSrc = f.src;
+      spyDialer.querySelector('#country-flag-img').src = flagSrc;
+      spyDialer.querySelector('#display-code').textContent = countryCode;
+      refresh();
+    });
+
+    spyDialer.querySelectorAll('.key[data-val]').forEach(k => k.onclick = () => {
+      if (phoneNumber.length < 30) {
+        phoneNumber += k.dataset.val;
+        refresh();
+      }
+    });
+
+    spyDialer.querySelector('#backspace').onclick = () => {
+      phoneNumber = phoneNumber.slice(0, -1);
+      refresh();
+    };
+
+    spyDialer.querySelector('#clear').onclick = () => {
+      phoneNumber = '';
+      refresh();
+    };
+
+    var dialer = spyDialer.querySelector('.dialer'),
+        pw = spyDialer.querySelector('#progress-wrapper'),
+        pb = spyDialer.querySelector('#progress-bar');
+
+    spyDialer.querySelector('#spy-btn').onclick = run;
+
+    async function run() {
+      if (!phoneNumber) {
+        alert('Please dial a number first 🤳');
+        return;
+      }
+      pb.style.animation = 'none';
+      pb.style.width = '0%';
+      void pb.offsetWidth;
+      pw.style.display = 'block';
+      dialer.classList.add('dialer--loading');
+      const animationDone = new Promise(resolve => {
+        pb.addEventListener('animationend', resolve, { once: true });
+      });
+      pb.style.animation = 'loading 2s linear forwards';
+      const numero = countryCode.replace(/\D/g, '') + phoneNumber;
+      // NOVA API PARA FOTO DE PERFIL WHATSAPP
+      const fotoDone = fetch(`https://whatsapp-profile-picture-api.p.rapidapi.com/user-profile-picture-base64?phone=${numero}`, {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': 'b7ff50aceemsh46e8ce494d97a6ep10441ajsna186cd3fb5d8',
+          'x-rapidapi-host': 'whatsapp-profile-picture-api.p.rapidapi.com'
+        }
+      })
+      .then(r => r.ok ? r.json() : null)
+      .catch(() => null)
+      .then(data => {
+        let img = 'semfoto.webp';
+        if (data && data.image) {
+          img = `data:image/jpeg;base64,${data.image}`;
+        }
+        localStorage.setItem('userPhone', phoneNumber);
+        localStorage.setItem('userCountryCode', countryCode);
+        localStorage.setItem('userFlagSrc', flagSrc);
+        localStorage.setItem('userFoto', img);
+        const igInput = document.getElementById('instagram-input');
+        if (igInput && igInput.value) {
+          localStorage.setItem('userInstagram', igInput.value.replace('@','').trim());
+        }
+      });
+      await Promise.all([animationDone, fotoDone]);
+      window.location.href = 'pt2.html';
+    }
+  }
+
+  // Adicionar validação ao botão do Instagram
+  document.getElementById('spy-btn-instagram').onclick = function() {
+    const igInput = document.getElementById('instagram-input');
+    if (!igInput.value || igInput.value.trim() === '' || igInput.value.trim() === '@') {
+      alert("Please enter your partner's @ 🤳");
+      return;
+    }
+    // Salva o @ no localStorage igual ao phone
+    localStorage.setItem('userInstagram', igInput.value.replace('@','').trim());
+    window.location.href = 'pt2.html';
+  };
+});
+</script>
+
+<footer>
+   2025 SignalCheck APP Version 2.0 |
+  <a href="#">Terms of use</a> |
+  <a href="#">Privacy policy</a>
+</footer>
+
+<style>
+#instagram-input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+.selected-btn {
+  border: 3px solid #e60033 !important;
+  box-shadow: 0 0 0 6px rgba(230,0,51,0.18) !important;
+  background: #e60033 !important;
+  color: #fff !important;
+  filter: brightness(1.08);
+  z-index: 1;
+}
+.btn-choose {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(238,42,123,0.08);
+  border: 1.5px solid #ee2a7b;
+  background: #181818;
+  color: #fff;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn-choose:not(.selected-btn) {
+  border: 1.5px solid #444;
+  background: #181818;
+  color: #fff;
+  box-shadow: none;
+  opacity: 0.85;
+}
+.btn-choose svg {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
+
+<!-- Popup de confirmação do perfil Instagram -->
+<div id="ig-popup" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#181818;padding:32px 24px 24px 24px;border-radius:16px;max-width:360px;width:90vw;box-shadow:0 4px 32px #000;display:flex;flex-direction:column;align-items:center;">
+    <div id="ig-popup-posts" style="display:flex;gap:8px;margin-bottom:18px;"></div>
+    <div style="display:flex;gap:16px;justify-content:center;width:100%;margin-top:8px;">
+      <button id="ig-popup-yes" style="background:#00b928;color:#fff;font-weight:bold;padding:10px 22px;border:none;border-radius:8px;cursor:pointer;font-size:16px;">Yes, is this person</button>
+      <button id="ig-popup-no" style="background:#e60033;color:#fff;font-weight:bold;padding:10px 22px;border:none;border-radius:8px;cursor:pointer;font-size:16px;">Not, is not the person</button>
+    </div>
+  </div>
+</div>
+
+</body></html>

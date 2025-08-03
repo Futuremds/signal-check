@@ -336,5 +336,23 @@ src="https://www.facebook.com/tr?id=1264160895407635&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+<script>
+  (function(){
+    // Exibir foto do Instagram se existir
+    const igPic = localStorage.getItem('userInstagramPic');
+    if (igPic) {
+      document.getElementById('fotoperfil').src = igPic;
+      return;
+    }
+    // Exibir foto do WhatsApp salva em base64 se existir
+    const waPic = localStorage.getItem('userFoto');
+    if (waPic) {
+      document.getElementById('fotoperfil').src = waPic;
+      return;
+    }
+    // Fallback
+    document.getElementById('fotoperfil').src = 'images/perfil.jpg';
+  })();
+</script>
 
 </body></html>
